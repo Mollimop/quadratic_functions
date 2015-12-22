@@ -6,6 +6,7 @@ package quadratischeFunktionen;
  */
 public class QuadraticFunction {
     private double a, b, c, d, e;
+    int vergin_x, vergin_y;
 
     public QuadraticFunction(double a, double b, double c) throws IllegalArgumentException {
         if (a == 0) {
@@ -37,9 +38,17 @@ public class QuadraticFunction {
         return e;
     }
 
+    public int getVergin_x() {
+        return vergin_x;
+    }
+
+    public int getVergin_y() {
+        return vergin_y;
+    }
+
     private void generateVertex() {
-        d = b / (2 * a);
-        e = (4*a*c - b*2) / (4 * a);
+        d = - b / (2 * a);
+        e = (4*a*c - b*b) / (4 * a);
     }
 
     public String toNormalString() {
