@@ -22,6 +22,8 @@ public class Main extends Application {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Geben Sie bitte die Parameter einer quadratischen Funktionen nach \"ax² + bx + c\" an.");
 
+        QuadraticFunction testFunction;
+
         System.out.print("a: ");
         double a = Double.parseDouble(scanner.next());
         System.out.print("b: ");
@@ -29,7 +31,13 @@ public class Main extends Application {
         System.out.print("c: ");
         double c = Double.parseDouble(scanner.next());
 
-        QuadraticFunction testFunction = new QuadraticFunction(a, b, c);
+        try {
+            testFunction = new QuadraticFunction(a, b, c);
+        } catch (IllegalArgumentException exception) {
+            System.out.println(exception.getMessage());
+            return;
+        }
+
         System.out.println(testFunction.toNormalString());
         System.out.println(testFunction.toVertexString());
     }

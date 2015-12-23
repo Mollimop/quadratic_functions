@@ -1,13 +1,28 @@
 package quadratischeFunktionen;
 
+import java.awt.geom.Point2D;
+
 /**
  * @author Thomas
  * @version 1.0 22.12.2015
  */
 public class QuadraticFunction {
-    private double a, b, c, d, e;
-    int vergin_x, vergin_y;
 
+    /**
+     * Parameters of the function (abc for ax² + bx + c and ade for a(x + d)² + e
+     */
+    private double a, b, c, d, e;
+
+    /**
+     * The vertex of the function
+     */
+    Point2D.Double vertex;
+
+    /**
+     * * Initializes a function with a, b and c and generates d, e and the vertex
+     *
+     * @throws IllegalArgumentException if a is zero
+     */
     public QuadraticFunction(double a, double b, double c) throws IllegalArgumentException {
         if (a == 0) {
             throw new IllegalArgumentException("a must not be 0!");
@@ -18,39 +33,75 @@ public class QuadraticFunction {
         generateVertex();
     }
 
+    /**
+     * @return the parameter a of the function
+     */
     public double getA() {
         return a;
     }
 
+    /**
+     * @return the parameter b of the function
+     */
     public double getB() {
         return b;
     }
 
+    /**
+     * @return the parameter c of the function
+     */
     public double getC() {
         return c;
     }
 
+    /**
+     * @return the parameter d of the function
+     */
     public double getD() {
         return d;
     }
 
+    /**
+     * @return the parameter e of the function
+     */
     public double getE() {
         return e;
     }
 
-    public int getVergin_x() {
-        return vergin_x;
+    /**
+     * Calculates y of the function for a given x
+     *
+     * @return y
+     */
+    public double getImageOf(double x) {
+        return a * x * x + b * x + c;
     }
 
-    public int getVergin_y() {
-        return vergin_y;
+    /**
+     * Gets the vertex of the function as a Point2D
+     *
+     * @return the vertex
+     */
+    public Point2D.Double getVertex() {
+        return vertex;
     }
 
+    /**
+     * Generates the parameters d and e of the function f(x) = a(x + d)² + e
+     * Used in constructor QuadraticFunction(double a, double b, double c)
+     */
     private void generateVertex() {
         d = - b / (2 * a);
-        e = (4*a*c - b*b) / (4 * a);
+        e = (4 * a * c - b * b) / (4 * a);
+
+        vertex = new Point2D.Double(-d, e);
     }
 
+    /**
+     * Generates a string of the function like ax²+ bx + c
+     *
+     * @return the string
+     */
     public String toNormalString() {
         String part1, part2, part3;
 
@@ -75,6 +126,10 @@ public class QuadraticFunction {
         return part1 + part2 + part3;
     }
 
+    /**
+     * Generates a string of the function like a(x + d)²+ e
+     * @return the string
+     */
     public String toVertexString() {
         String part1, part2;
         if (d > 0) {
