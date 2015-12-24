@@ -7,6 +7,18 @@ import java.awt.geom.Point2D;
  * @version 1.0 22.12.2015
  */
 public class QuadraticFunction {
+    //Suggestion for x-values:
+    //
+    //private int xquantity;                          (result of user input)
+    //private double[] fx = new double[xquantity];
+    //private double xstep                            (result of user input)
+    //privte double xstart                            (result of user input)
+    //private double x = xstart
+    //for(int i = 0; i <= xquantity; i++){
+    //   fx[i] =  a * (Math.pow(x, 2)) + b * x + c    (the values of the array fx are the program's output)
+    //   x = x + xstep
+    //}
+
 
     /**
      * Parameters of the function (abc for ax² + bx + c and ade for a(x + d)² + e
