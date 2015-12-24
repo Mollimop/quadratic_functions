@@ -2,7 +2,7 @@ package quadratischeFunktionen;
 
 /**
  * @version 0.1 22.12.2015
- * @author Thomas
+ * @author Thomas Kirz, Sebastian Vogt
  */
 
 import javafx.application.Application;

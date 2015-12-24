@@ -3,10 +3,13 @@ package quadratischeFunktionen;
 import java.awt.geom.Point2D;
 
 /**
- * @author Thomas
+ * @author Thomas Kirz, Sebastian Vogt
  * @version 1.0 22.12.2015
  */
 public class QuadraticFunction {
+
+    // Test
+
     //Suggestion for x-values:
     //
     //private int xquantity;                          (result of user input)
