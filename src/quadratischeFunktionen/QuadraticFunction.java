@@ -106,7 +106,7 @@ public class QuadraticFunction {
      * Used in constructor QuadraticFunction(double a, double b, double c)
      */
     private void generateVertex() {
-        d = - b / (2 * a);
+        d =  b / (2 * a);
         e = (4 * a * c - b * b) / (4 * a);
 
         vertex = new Point2D.Double(-d, e);
