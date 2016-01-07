@@ -1,6 +1,8 @@
 package quadratischeFunktionen;
 
 import java.awt.geom.Point2D;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * @author Thomas Kirz, Sebastian Vogt
@@ -113,8 +115,35 @@ public class QuadraticFunction {
     }
 
     /**
-     * Generates a string of the function like ax²+ bx + c
+     * This method returns all images of a function for an ArrayList
+     * @param list the ArrayList containing Doubles to be get an image
+     * @return the HashMap with x as key and y as value
+     */
+    public HashMap<Double, Double> getImagesOf(ArrayList<Double> list) {
+        HashMap<Double, Double> images = new HashMap<>();
+        list.forEach(x -> images.put(x, getImageOf(x)));
+        return images;
+    }
+
+    /**
+     * This method returns all images of a function with x starting with start, ending with end and
      *
+     * @param start
+     * @param end
+     * @param step
+     * @return
+     * @throws IllegalArgumentException
+     */
+    public HashMap<Double, Double> getImagesOf(double start, double end, double step) throws IllegalArgumentException {
+        ArrayList<Double> list = new ArrayList<>();
+        for (double i = start; i <= end; i += step) {
+            list.add(i);
+        }
+        return getImagesOf(list);
+    }
+
+    /**
+     * Generates a string of the function like ax²+ bx + c
      * @return the string
      */
     public String toNormalString() {
