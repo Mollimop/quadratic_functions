@@ -40,6 +40,7 @@ public class Main extends Application {
 
         System.out.println(testFunction.toNormalString());
         System.out.println(testFunction.toVertexString());
+        System.out.println(testFunction.toZeroString());
     }
 
     @Override

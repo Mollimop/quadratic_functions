@@ -1,6 +1,7 @@
 package quadratischeFunktionen;
 
 import java.awt.geom.Point2D;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -36,7 +37,13 @@ public class QuadraticFunction {
     Point2D.Double vertex;
 
     /**
-     * * Initializes a function with a, b and c and generates d, e and the vertex
+     * The zeroes of the function
+     */
+    private double zero1;
+    private double zero2;
+
+    /**
+     * * Initializes a function with a, b and c and generates d, e, the vertex and the zeroes
      *
      * @throws IllegalArgumentException if a is zero
      */
@@ -48,6 +55,7 @@ public class QuadraticFunction {
         this.b = b;
         this.c = c;
         generateVertex();
+        generateZero();
     }
 
     /**
@@ -104,6 +112,20 @@ public class QuadraticFunction {
     }
 
     /**
+     * @return the zero 1
+     */
+    public double getZero1(){
+        return zero1;
+    }
+
+    /**
+     * @return the zero 2
+     */
+    public double getZero2(){
+        return zero2;
+    }
+
+    /**
      * Generates the parameters d and e of the function f(x) = a(x + d)² + e
      * Used in constructor QuadraticFunction(double a, double b, double c)
      */
@@ -112,6 +134,14 @@ public class QuadraticFunction {
         e = (4 * a * c - b * b) / (4 * a);
 
         vertex = new Point2D.Double(-d, e);
+    }
+
+    /**
+     * Generates the zeroes of the function
+     */
+    private void generateZero(){
+        zero1 = Math.sqrt(- (e / a)) - d;
+        zero2 = - Math.sqrt(- (e / a)) - d;
     }
 
     /**
@@ -193,5 +223,13 @@ public class QuadraticFunction {
         }
 
         return part1 + part2;
+    }
+
+    /**
+     * Generates a string for the zeroes
+     * @return the string
+     */
+    public String toZeroString(){
+        return zero1 + ", " +  zero2;
     }
 }
