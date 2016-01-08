@@ -1,7 +1,6 @@
 package quadratischeFunktionen;
 
 import java.awt.geom.Point2D;
-import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -124,8 +123,8 @@ public class QuadraticFunction {
      * Generates the zeroes of the function
      */
     private void generateZero(){
-        zero1 = Math.sqrt(- (e / a)) - d;
-        zero2 = - zero1;
+        zero1 = Math.sqrt(-(e / a)) - d;
+        zero2 = -Math.sqrt(-(e / a)) - d;
     }
 
     /**
@@ -214,10 +213,10 @@ public class QuadraticFunction {
      * @return the string
      */
     public String toZeroString(){
-        if(!(a < 0 ^ e < 0)){
-            return "No zeroes";
-        }else{
+        if (a / e < 0) {
             return zero1 + ", " + zero2;
+        } else {
+            return "No zeroes";
         }
     }
 }
