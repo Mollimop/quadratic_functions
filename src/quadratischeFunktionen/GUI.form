@@ -86,7 +86,7 @@
         <properties>
           <background color="-1"/>
           <foreground color="-6702663"/>
-          <text value="Label"/>
+          <text value="*x+"/>
         </properties>
       </component>
       <component id="b771c" class="javax.swing.JLabel" binding="labelAb">
@@ -96,7 +96,7 @@
         <properties>
           <background color="-1"/>
           <foreground color="-6702663"/>
-          <text value="Label"/>
+          <text value="*x²+"/>
         </properties>
       </component>
       <component id="96e66" class="javax.swing.JTextField" binding="text2">
