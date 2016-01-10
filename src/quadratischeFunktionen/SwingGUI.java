@@ -1,10 +1,8 @@
 package quadratischeFunktionen;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.Point2D;
 
 /**
  * Created by Sebastian on 10.01.2016.
@@ -84,11 +82,12 @@ public class SwingGUI extends JFrame implements ActionListener {
             label11.setText("" + function.generateY(Double.parseDouble(text11.getText())));
 
 
+        } catch (IllegalArgumentException ex) {
+            JOptionPane.showMessageDialog(null, "Illegal Arguments");
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "ungültige eingabe");
+            JOptionPane.showMessageDialog(null, "An unknown error occured");
         }
 
 
     }
-
 }
