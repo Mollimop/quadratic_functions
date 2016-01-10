@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="quadratischeFunktionen.SwingGUI">
+  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="18" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="550" height="504"/>
+    </constraints>
+    <properties>
+      <background color="-12236470"/>
+      <enabled value="true"/>
+      <font name="Yu Gothic Medium" size="11" style="2"/>
+      <foreground color="-1"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="51d76" class="javax.swing.JLabel" binding="labelA">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="a"/>
+        </properties>
+      </component>
+      <component id="d8007" class="javax.swing.JLabel" binding="labelB">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="b"/>
+        </properties>
+      </component>
+      <component id="4f043" class="javax.swing.JLabel" binding="labelC">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="c"/>
+        </properties>
+      </component>
+      <component id="d5ba1" class="javax.swing.JTextField" binding="text1">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="-5"/>
+        </properties>
+      </component>
+      <component id="6c951" class="javax.swing.JTextField" binding="textA">
+        <constraints>
+          <grid row="1" column="0" row-span="3" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="a"/>
+        </properties>
+      </component>
+      <component id="a019d" class="javax.swing.JTextField" binding="textC">
+        <constraints>
+          <grid row="1" column="4" row-span="3" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="c"/>
+        </properties>
+      </component>
+      <component id="40a0" class="javax.swing.JLabel" binding="labelBc">
+        <constraints>
+          <grid row="1" column="3" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="Label"/>
+        </properties>
+      </component>
+      <component id="b771c" class="javax.swing.JLabel" binding="labelAb">
+        <constraints>
+          <grid row="1" column="1" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="Label"/>
+        </properties>
+      </component>
+      <component id="96e66" class="javax.swing.JTextField" binding="text2">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="-4"/>
+        </properties>
+      </component>
+      <component id="bc35c" class="javax.swing.JTextField" binding="text3">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="-3"/>
+        </properties>
+      </component>
+      <component id="ff816" class="javax.swing.JTextField" binding="text5">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="-1"/>
+        </properties>
+      </component>
+      <component id="c7794" class="javax.swing.JTextField" binding="text6">
+        <constraints>
+          <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="0"/>
+        </properties>
+      </component>
+      <component id="4d6e1" class="javax.swing.JTextField" binding="text7">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="1"/>
+        </properties>
+      </component>
+      <component id="61c6c" class="javax.swing.JTextField" binding="text8">
+        <constraints>
+          <grid row="11" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="a3045" class="javax.swing.JTextField" binding="text9">
+        <constraints>
+          <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="3"/>
+        </properties>
+      </component>
+      <component id="1dfeb" class="javax.swing.JTextField" binding="text10">
+        <constraints>
+          <grid row="13" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="4"/>
+        </properties>
+      </component>
+      <component id="501ff" class="javax.swing.JTextField" binding="text11">
+        <constraints>
+          <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="5"/>
+        </properties>
+      </component>
+      <component id="5f85f" class="javax.swing.JLabel" binding="labelVertex">
+        <constraints>
+          <grid row="15" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="Vertex"/>
+        </properties>
+      </component>
+      <component id="5ddab" class="javax.swing.JLabel" binding="labelZero">
+        <constraints>
+          <grid row="16" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="Zeroes"/>
+        </properties>
+      </component>
+      <component id="2d8e2" class="javax.swing.JLabel" binding="label1">
+        <constraints>
+          <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="f(x1)"/>
+        </properties>
+      </component>
+      <component id="343f5" class="javax.swing.JLabel" binding="label2">
+        <constraints>
+          <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="f(x2)"/>
+        </properties>
+      </component>
+      <component id="91a78" class="javax.swing.JLabel" binding="label3">
+        <constraints>
+          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="f(x3)"/>
+        </properties>
+      </component>
+      <component id="fdc69" class="javax.swing.JLabel" binding="label4">
+        <constraints>
+          <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="f(x4)"/>
+        </properties>
+      </component>
+      <component id="11956" class="javax.swing.JLabel" binding="label5">
+        <constraints>
+          <grid row="8" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="f(x5)"/>
+        </properties>
+      </component>
+      <component id="f1ecb" class="javax.swing.JLabel" binding="label6">
+        <constraints>
+          <grid row="9" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="f(x6)"/>
+        </properties>
+      </component>
+      <component id="b8726" class="javax.swing.JLabel" binding="label7">
+        <constraints>
+          <grid row="10" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="f(x7)"/>
+        </properties>
+      </component>
+      <component id="1559c" class="javax.swing.JLabel" binding="label8">
+        <constraints>
+          <grid row="11" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="f(x8)"/>
+        </properties>
+      </component>
+      <component id="71a72" class="javax.swing.JLabel" binding="label9">
+        <constraints>
+          <grid row="12" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="f(x9)"/>
+        </properties>
+      </component>
+      <component id="dfeb3" class="javax.swing.JLabel" binding="label10">
+        <constraints>
+          <grid row="13" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <enabled value="true"/>
+          <foreground color="-1"/>
+          <text value="f(x10)"/>
+        </properties>
+      </component>
+      <component id="4df4a" class="javax.swing.JLabel" binding="label11">
+        <constraints>
+          <grid row="14" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <text value="f(x11)"/>
+        </properties>
+      </component>
+      <component id="3da1d" class="javax.swing.JLabel" binding="labelDisplayVertex">
+        <constraints>
+          <grid row="15" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="?"/>
+        </properties>
+      </component>
+      <component id="58126" class="javax.swing.JLabel" binding="labelDisplayZero">
+        <constraints>
+          <grid row="16" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="?"/>
+        </properties>
+      </component>
+      <component id="64291" class="javax.swing.JTextField" binding="textB">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="b"/>
+        </properties>
+      </component>
+      <component id="6d383" class="javax.swing.JTextField" binding="text4">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <foreground color="-1"/>
+          <text value="-2"/>
+        </properties>
+      </component>
+      <component id="bc590" class="javax.swing.JButton" binding="generate">
+        <constraints>
+          <grid row="17" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12236470"/>
+          <enabled value="true"/>
+          <foreground color="-1"/>
+          <hideActionText value="false"/>
+          <text value="compute"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

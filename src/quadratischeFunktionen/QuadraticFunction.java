@@ -128,6 +128,14 @@ public class QuadraticFunction {
     }
 
     /**
+     * Generates x-values
+     */
+    public double generateY(double x){
+        double y = (a * (x * x)) + (b * x) + c;
+        return y;
+    }
+
+    /**
      * This method returns all images of a function for an ArrayList
      * @param list the ArrayList containing Doubles to be get an image
      * @return the HashMap with x as key and y as value

@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Main extends Application {
@@ -18,6 +19,12 @@ public class Main extends Application {
     Button button;
 
     public static void main(String[] args) {
+        JFrame frame = new JFrame("GUI");
+        frame.setContentPane(new SwingGUI().panel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+
         // launch(args);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Geben Sie bitte die Parameter einer quadratischen Funktionen nach \"ax² + bx + c\" an.");
