@@ -1,16 +1,23 @@
 class QuadraticFunction
 
   # Parameters of the function (abc for ax² + bx + c and ade for a(x + d)² + e
-  @a ,@b ,@c ,@d ,@e
+  @a
+  @b
+  @c
+  @d
+  @e
 
   # The vertex of the function
   @vertex
 
   # The zeroes of the function
-  @zero1, @zero2
+  @zero1
+  @zero2
 
   # Three points of a function that are used to generate the function term.
-  @p1, @p2, @p3
+  @p1
+  @p2
+  @p3
 
   # Initializes a function...
   def initialize(a, b, c, p1, p2, p3)
@@ -69,4 +76,98 @@ class QuadraticFunction
     @b = (((@a * ((@p3[:x] * @p3[:x]) - (@p2[:x] * @p2[:x]))) + @p2[:y] - @p3[:y]) / (@p2[:x] - @p3[:x]));
     @c = (@p3[y]) - (@a * (@p3[:x] * @p3[:x])) - (@b * @p3[:x]);
   end
+
+  # This method returns all images of a function with x starting with start, ending with end and
+  def getImagesOf2(start, theend, step)
+    many = (theend - start) / step
+    many = many.to_i
+    i = start
+    images = {}
+    many.times do |n|
+      images[i.to_s.to_sym] = getImageOf(i)
+      i += step
+    end
+    return images
+  end
+
+  # Generates a string of the function like ax²+ bx + c
+  def toNormalString()
+    part1
+    part2
+    part3
+
+    part1 = a + "x²"
+
+    if (b > 0)
+      part2 = " + " + b + "x"
+    elsif (b < 0)
+      part2 = " - " + -b + "x"
+    else
+      part2 = ""
+    end
+
+    if (c > 0)
+      part3 = " + " + c
+    elsif (c < 0)
+      part3 = " - " + -c
+    else
+      part3 = ""
+    end
+
+    return part1 + part2 + part3;
+  end
+
+  # Generates a string of the function like a(x + d)²+ e
+  def toVertexString()
+    part1
+    part2
+
+    if (d > 0)
+      part1 = a + "(x + " + d + ")²"
+    elsif (d < 0)
+      part1 = a + "(x - " + -d + ")²"
+    else
+      part1 = a + "x²"
+    end
+
+    if (e > 0)
+      part2 = " + " + e
+    elsif (e < 0)
+      part2 = " - " + -e
+    else
+      part2 = ""
+    end
+
+    return part1 + part2
+  end
+
+  # Generates a string for the zeroes
+  def toZeroString()
+    if (a / e < 0)
+      return zero1 + ", " + zero2
+    else
+      return "No zeroes"
+    end
+  end
+
+
 end
+
+
+# Example for what you can do with that class!
+puts "gimme a"
+a = gets.chomp
+puts "gimme b"
+b = gets.chomp
+puts "gimme c"
+c = gets.chomp
+func = QuadraticFunction.new(a.to_i, b.to_i, c.to_i, false, false, false)
+
+puts "gimme start"
+start = gets.chomp
+puts "gimme theend"
+theend = gets.chomp
+puts "gimme step"
+step = gets.chomp
+
+puts func.getImagesOf2(start.to_f, theend.to_f, step.to_f)
