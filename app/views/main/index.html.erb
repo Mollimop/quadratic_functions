@@ -1,0 +1,6 @@
+<%= simple_form_for @func, :url => {:action => :calc, :controller => :main}  do |f| %>
+  <%= f.input :a %>
+  <%= f.input :b %>
+  <%= f.input :c %>
+  <%= f.button :submit %>
+<% end %>

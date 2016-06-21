@@ -1,5 +1,11 @@
 class QuadraticFunction
 
+  extend ActiveModel::Naming
+  include ActiveModel::Conversion
+  def persisted?
+    false
+  end
+
   # Parameters of the function (abc for ax² + bx + c and ade for a(x + d)² + e
   @a
   @b
@@ -20,7 +26,13 @@ class QuadraticFunction
   @p3
 
   # Initializes a function...
-  def initialize(a, b, c, p1, p2, p3)
+  def initialize(*smth)
+    a = smth[0]
+    b = smth[1]
+    c = smth[2]
+    p1 = smth[3]
+    p2 = smth[4]
+    p3 = smth[5]
     # ...with a, b and c and generates d, e, the vertex and the zeroes
     if(a && b && c)
       raise "Illegal Argument" if a == 0
@@ -30,7 +42,7 @@ class QuadraticFunction
       generateVertex()
       generateZero()
     # ...with p1, p2, p3 and generates a, b, c, d, e the evrtex and the zeroes
-    elsif(p1 && p2 && p3)
+  elsif(p1 && p2 && p3)
       @p1 = p1
       @p2 = p2
       @p3 = p3
@@ -58,15 +70,22 @@ class QuadraticFunction
 
   # Generates the zeroes of the function
   def generateZero()
-    @zero1 = Math.sqrt(-(@e / @a)) - @d
-    @zero1 = - Math.sqrt(-(@e / @a)) - @d
+    if (-(@e / @a) >= 0)
+      @zero1 = Math.sqrt(-(@e / @a)) - @d
+      @zero2 = - Math.sqrt(-(@e / @a)) - @d
+    else
+      @zero1 = "NaN"
+      @zero2 = "NaN"
+    end
   end
 
-  #This method returns all images of a function for a Hash
-  def getImagesOf(xes)
-    images = {}
-    xes.each do |num, x|
-      images[num] = getImageOf(x)
+  #This method returns all images of a function for a flexible number of arguments
+  def getImagesOf(*xes)
+    images = Array.new()
+    i = 0
+    xes.each do |x|
+      images[i] = getImageOf(x)
+      i += 1 unless i == xes.length
     end
     return images
   end
@@ -155,19 +174,19 @@ end
 
 
 # Example for what you can do with that class!
-puts "gimme a"
-a = gets.chomp
-puts "gimme b"
-b = gets.chomp
-puts "gimme c"
-c = gets.chomp
-func = QuadraticFunction.new(a.to_i, b.to_i, c.to_i, false, false, false)
+#puts "gimme a"
+#a = gets.chomp
+#puts "gimme b"
+#b = gets.chomp
+#puts "gimme c"
+#c = gets.chomp
+#func = QuadraticFunction.new({a.to_f, b.to_f, c-to_f)
 
-puts "gimme start"
-start = gets.chomp
-puts "gimme theend"
-theend = gets.chomp
-puts "gimme step"
-step = gets.chomp
+#puts "gimme start"
+#start = gets.chomp
+#puts "gimme theend"
+#theend = gets.chomp
+#puts "gimme step"
+#step = gets.chomp
 
-puts func.getImagesOf2(start.to_f, theend.to_f, step.to_f)
+#puts func.getImagesOf2(start.to_f, theend.to_f, step.to_f)
