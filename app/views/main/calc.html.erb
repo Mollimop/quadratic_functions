@@ -1,2 +1,16 @@
-Example: Vertex<br>
-(<%= @vertex[:x] %> | <%= @vertex[:y] %>)
+<% if @vertex %>
+
+Vertex:<br>
+(<%= @vertex[:x] %> | <%= @vertex[:y] %>)<br><br>
+<%="Zeroes:" unless (@zero1.eql? "NaN") && (@zero2.eql? "NaN") %><br>
+<%= @zero1 unless @zero1.eql? "NaN"  %> <%= ",#{@zero2}" unless @zero2.eql? "NaN" %><br><br>
+<% if @images %>
+  Images:<br>
+  <% @images.each do |x, img| %>
+    <%= "f(#{x}) = #{img}" %><br>
+  <% end %>
+<% end %>
+
+<% else %>
+  A cannot be 0
+<% end %>
