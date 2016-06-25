@@ -1,21 +1,78 @@
-<%= simple_form_for @func, :url => {:action => :calc, :controller => :main}  do |f| %>
-<div class="mdl-textfield mdl-js-textfield">
-  <%= f.input :a, input_html: { class: 'mdl-textfield__input' }, label_html: { class: "mdl-textfield__label" }%>
-</div><br><div class="mdl-textfield mdl-js-textfield">
-  <%= f.input :b, input_html: { class: 'mdl-textfield__input' }, label_html: { class: "mdl-textfield__label" } %>
-</div><br><div class="mdl-textfield mdl-js-textfield">
-  <%= f.input :c, input_html: { class: 'mdl-textfield__input' }, label_html: { class: "mdl-textfield__label" } %>
-</div><br>
-<div class="mdl-textfield mdl-js-textfield">
-  <%=label_tag 'start', nil, class: "mdl-textfield__label" %>
-  <%=text_field_tag 'start', nil, class: 'mdl-textfield__input' %>
-</div><br><div class="mdl-textfield mdl-js-textfield">
-  <%=label_tag 'step', nil, class: "mdl-textfield__label" %>
-  <%=text_field_tag 'step', nil, class: 'mdl-textfield__input' %>
-</div><br><div class="mdl-textfield mdl-js-textfield">
-  <%=label_tag 'end', nil, class: "mdl-textfield__label" %>
-  <%=text_field_tag 'end', nil, class: 'mdl-textfield__input' %>
-</div><br>
-  <%= f.button :submit, 'compute', class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" %>
-
-<% end %>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button">
+        <a href = "https://github.com/Mollimop/Mathe" target = "_blank" class = "material-icons">code</a>
+      </div>
+      <!-- Title -->
+      <span class="mdl-layout-title">quadratic function calculator</span>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#scroll-tab-1" class="mdl-layout__tab is-active">With a, b, and c</a>
+      <a href="#scroll-tab-2" class="mdl-layout__tab">with three points on the graph</a>
+    </div>
+  </header>
+<main class="mdl-layout__content">
+  <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+    <div class="page-content">
+      <%= simple_form_for @func, :url => {:action => :calc, :controller => :main}  do |f| %>
+      <div class="mdl-textfield mdl-js-textfield">
+        <%= f.input :a, input_html: { class: 'mdl-textfield__input' }, label_html: { class: "mdl-textfield__label" }%>
+      </div><br><div class="mdl-textfield mdl-js-textfield">
+        <%= f.input :b, input_html: { class: 'mdl-textfield__input' }, label_html: { class: "mdl-textfield__label" } %>
+      </div><br><div class="mdl-textfield mdl-js-textfield">
+        <%= f.input :c, input_html: { class: 'mdl-textfield__input' }, label_html: { class: "mdl-textfield__label" } %>
+      </div><br>
+      <div class="mdl-textfield mdl-js-textfield">
+        <%=label_tag 'start', nil, class: "mdl-textfield__label" %>
+        <%=text_field_tag 'start', nil, class: 'mdl-textfield__input' %>
+      </div><br><div class="mdl-textfield mdl-js-textfield">
+        <%=label_tag 'step', nil, class: "mdl-textfield__label" %>
+        <%=text_field_tag 'step', nil, class: 'mdl-textfield__input' %>
+      </div><br><div class="mdl-textfield mdl-js-textfield">
+        <%=label_tag 'end', nil, class: "mdl-textfield__label" %>
+        <%=text_field_tag 'end', nil, class: 'mdl-textfield__input' %>
+      </div><br>
+        <%= f.button :submit, 'compute', class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" %>
+      <% end %>
+    </div>
+  </section>
+  <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+    <div class="page-content">
+      <%= simple_form_for @func, :url => {:action => :calcpoints, :controller => :main}  do |f| %>
+      <div class="mdl-textfield mdl-js-textfield">
+        <%=label_tag 'p1_x', nil, class: "mdl-textfield__label" %>
+        <%=text_field_tag 'p1_x', nil, class: 'mdl-textfield__input' %>
+      </div><br>
+      <div class="mdl-textfield mdl-js-textfield">
+        <%=label_tag 'p1_y', nil, class: "mdl-textfield__label" %>
+        <%=text_field_tag 'p1_y', nil, class: 'mdl-textfield__input' %>
+      </div><br><div class="mdl-textfield mdl-js-textfield">
+        <%=label_tag 'p1_x', nil, class: "mdl-textfield__label" %>
+        <%=text_field_tag 'p2_x', nil, class: 'mdl-textfield__input' %>
+      </div><br><div class="mdl-textfield mdl-js-textfield">
+        <%=label_tag 'p2_y', nil, class: "mdl-textfield__label" %>
+        <%=text_field_tag 'p2_y', nil, class: 'mdl-textfield__input' %>
+      </div><br><div class="mdl-textfield mdl-js-textfield">
+        <%=label_tag 'p3_x', nil, class: "mdl-textfield__label" %>
+        <%=text_field_tag 'p3_x', nil, class: 'mdl-textfield__input' %>
+      </div><br><div class="mdl-textfield mdl-js-textfield">
+        <%=label_tag 'p3_y', nil, class: "mdl-textfield__label" %>
+        <%=text_field_tag 'p2_y', nil, class: 'mdl-textfield__input' %>
+      </div><br><div class="mdl-textfield mdl-js-textfield">
+        <%=label_tag 'start', nil, class: "mdl-textfield__label" %>
+        <%=text_field_tag 'start', nil, class: 'mdl-textfield__input' %>
+      </div><br><div class="mdl-textfield mdl-js-textfield">
+        <%=label_tag 'step', nil, class: "mdl-textfield__label" %>
+        <%=text_field_tag 'step', nil, class: 'mdl-textfield__input' %>
+      </div><br><div class="mdl-textfield mdl-js-textfield">
+        <%=label_tag 'end', nil, class: "mdl-textfield__label" %>
+        <%=text_field_tag 'end', nil, class: 'mdl-textfield__input' %>
+      </div><br>
+        <%= f.button :submit, 'compute', class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" %>
+      <% end %>
+    </div>
+  </section>
+</main>
+</div>

@@ -1,16 +1,58 @@
-<% if @vertex %>
+<header class="mdl-layout__header">
+  <div class="mdl-layout__header-row">
+    <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button">
+      <a href = "/" class = "material-icons">arrow_back</a>
+    </div>
+    <span class="mdl-layout-title">quadratic function calculator</span>
+  </div>
+</header>
 
-Vertex:<br>
-(<%= @vertex[:x] %> | <%= @vertex[:y] %>)<br><br>
-<%="Zeroes:" unless (@zero1.eql? "NaN") && (@zero2.eql? "NaN") %><br>
-<%= @zero1 unless @zero1.eql? "NaN"  %> <%= ",#{@zero2}" unless @zero2.eql? "NaN" %><br><br>
-<% if @images %>
-  Images:<br>
-  <% @images.each do |x, img| %>
-    <%= "f(#{x}) = #{img}" %><br>
-  <% end %>
-<% end %>
+<div id="tables">
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">vertex</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">(<%= @vertex[:x] %> | <%= @vertex[:y] %>)</td>
+        </tr>
+  </tbody>
+</table>
 
-<% else %>
-  A cannot be 0
-<% end %>
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">zero1</th>
+      <th>zero2</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric"><%= @zero1 %></td>
+          <td><%= @zero2 %></td>
+        </tr>
+  </tbody>
+</table>
+
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">x-Value</th>
+      <th>y-Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @images %>
+      <% @images.each do |x, img| %>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric"><%= x %></td>
+          <td><%= img %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
