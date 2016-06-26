@@ -180,7 +180,7 @@ end
 #b = gets.chomp
 #puts "gimme c"
 #c = gets.chomp
-#func = QuadraticFunction.new({a.to_f, b.to_f, c-to_f)
+#func = QuadraticFunction.new(a.to_f, b.to_f, c-to_f)
 
 #puts "gimme start"
 #start = gets.chomp
